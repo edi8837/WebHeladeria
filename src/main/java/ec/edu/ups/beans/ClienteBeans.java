@@ -41,8 +41,7 @@ public class ClienteBeans implements Serializable {
     private String apellido;
     private String correo;
     private String contrasenia;
-    @Temporal(TemporalType.DATE)
-    private GregorianCalendar fechaNacimiento;
+ 
     private String telefono;
     private String direccion;
 
@@ -52,7 +51,7 @@ public class ClienteBeans implements Serializable {
     }
 
     public String add() {
-        cFacade.create(new Cliente(id, cedula,nombre,apellido,correo,contrasenia,fechaNacimiento,telefono,direccion));
+        cFacade.create(new Cliente(id, cedula,nombre,apellido,correo,contrasenia,telefono,direccion));
         list = cFacade.findAll();
         return null;
     }
@@ -147,13 +146,7 @@ public class ClienteBeans implements Serializable {
         this.contrasenia = contrasenia;
     }
 
-    public GregorianCalendar getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(GregorianCalendar fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
+   
 
     public String getTelefono() {
         return telefono;

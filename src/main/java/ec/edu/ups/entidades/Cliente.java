@@ -40,8 +40,6 @@ public class Cliente implements Serializable {
     private String apellido;
     private String correo;
     private String contrasenia;
-    @Temporal(TemporalType.DATE)
-    private GregorianCalendar fechaNacimiento;
     private String telefono;
     private String direccion;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
@@ -58,7 +56,7 @@ public class Cliente implements Serializable {
 
     }
 
-    public Cliente(int id, String cedula, String nombre, String apellido, String correo, String contrasenia, GregorianCalendar fechaNacimiento, String telefono, String direccion) {
+    public Cliente(int id, String cedula, String nombre, String apellido, String correo, String contrasenia,  String telefono, String direccion) {
         super();
         this.setId(id);
         this.setCedula(cedula);
@@ -66,18 +64,17 @@ public class Cliente implements Serializable {
         this.setApellido(apellido);
         this.setCorreo(correo); 
         this.setContrasenia(contrasenia);
-        this.setFechaNacimiento(new GregorianCalendar(Locale.ITALY));
         this.setTelefono(telefono); 
         this.setDireccion(direccion);
     }   
 
-    public Cliente(int id, String cedula, String nombre, String apellido, String correo, GregorianCalendar fechaNacimiento, String telefono, String direccion) {
+    public Cliente(int id, String cedula, String nombre, String apellido, String correo,  String telefono, String direccion) {
         this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
-        this.fechaNacimiento = fechaNacimiento;
+      
         this.telefono = telefono;
         this.direccion = direccion;
     }
@@ -134,13 +131,7 @@ public class Cliente implements Serializable {
         this.contrasenia = contrasenia;
     }
 
-    public GregorianCalendar getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(GregorianCalendar fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
+   
 
     public String getTelefono() {
         return telefono;
@@ -185,7 +176,7 @@ public class Cliente implements Serializable {
 
     @Override
     public String toString() {
-        return "Cliente{" + "id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contrasenia=" + contrasenia + ", fechaNacimiento=" + fechaNacimiento + ", telefono=" + telefono + ", direccion=" + direccion + ", pedidos=" + pedidos + ", tarjeta=" + tarjeta + '}';
+        return "Cliente{" + "id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contrasenia=" + contrasenia + ", telefono=" + telefono + ", direccion=" + direccion + ", pedidos=" + pedidos + ", tarjeta=" + tarjeta + '}';
     }
 
     

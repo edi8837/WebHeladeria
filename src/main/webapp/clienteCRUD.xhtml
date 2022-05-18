@@ -70,12 +70,6 @@
                     <h:outputText value="#{o.contrasenia}" rendered="#{not o.editable}" />
                 </h:column>
                 <h:column>
-                    <f:facet name="header">fechaNacimiento</f:facet>
-                    <h:inputText value="#{o.fechaNacimiento}" size="10"
-                                 rendered="#{o.editable}" />
-                    <h:outputText value="#{o.fechaNacimiento}" rendered="#{not o.editable}" />
-                </h:column>
-                <h:column>
                     <f:facet name="header">telefono</f:facet>
                     <h:inputText value="#{o.telefono}" size="10"
                                  rendered="#{o.editable}" />
@@ -106,7 +100,6 @@
                 <li>apellido<h:inputText size="10" value="#{clienteBeans.apellido}" /></li>
                 <li>correo<h:inputText size="10" value="#{clienteBeans.correo}" /></li>
                 <li>contrasenia<h:inputText size="10" value="#{clienteBeans.contrasenia}" /></li>
-                
                 <li>telefono<h:inputText size="10" value="#{clienteBeans.telefono}" /></li>
                 <li>direccion<h:inputText size="10" value="#{clienteBeans.direccion}" /></li><!-- comment -->
                 
