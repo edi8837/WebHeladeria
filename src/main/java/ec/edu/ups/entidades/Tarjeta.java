@@ -12,39 +12,26 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.NamedQuery;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  *
  * @author Jonny
  */
+@NamedQuery(name = "getTarjeta", query = "SELECT t FROM  Tarjeta t")
 @Entity
-@NamedQuery(name = "getPedido", query = "SELECT pe FROM  Pedido pe")
-public class Pedido implements Serializable {
+class Tarjeta implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private char estado;
-    private double longitud;
-    private double latitud;
-    private double subTotal;
-    private double iva;
-    private double total;
+    private String nombreTitular;
+    private int numTarjeta;
+    private LocalDate fechaCducidad;
+    private int codigoCvv;
+    private String tipo;
     @ManyToOne
     @JoinColumn(nullable = true)
     private Cliente cliente;
-
-    @ManyToOne
-    @JoinColumn(nullable = true)
-    private Producto producto;
-    
-    @ManyToOne
-    @JoinColumn(nullable = true)
-    private FacturaDetalle facturaDetalle;
-
-    public Pedido() {
-        super();
-    }
-
 }

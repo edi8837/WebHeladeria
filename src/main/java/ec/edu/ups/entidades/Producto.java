@@ -18,33 +18,24 @@ import java.io.Serializable;
  * @author Jonny
  */
 @Entity
-@NamedQuery(name = "getPedido", query = "SELECT pe FROM  Pedido pe")
-public class Pedido implements Serializable {
+@NamedQuery(name = "getProducto", query = "SELECT p FROM  Producto p")
+class Producto implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private char estado;
-    private double longitud;
-    private double latitud;
-    private double subTotal;
-    private double iva;
-    private double total;
-    @ManyToOne
-    @JoinColumn(nullable = true)
-    private Cliente cliente;
+    private String nombre;
+    private String descripcion;
+    private String marca;
+    private int stock;
+    private String estado;
+    private Double precio;
 
     @ManyToOne
     @JoinColumn(nullable = true)
-    private Producto producto;
-    
+    private Pedido pedido;
     @ManyToOne
     @JoinColumn(nullable = true)
-    private FacturaDetalle facturaDetalle;
-
-    public Pedido() {
-        super();
-    }
-
+    private Sucursal sucursal;
 }

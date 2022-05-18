@@ -46,6 +46,9 @@ public class Cliente implements Serializable {
     private String direccion;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
     private Set<Pedido> pedidos = new HashSet<Pedido>();
+    
+   @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
+    private Set<Tarjeta> tarjeta = new HashSet<Tarjeta>();
 
     @Transient
     private boolean editable;
@@ -66,8 +69,19 @@ public class Cliente implements Serializable {
         this.setFechaNacimiento(new GregorianCalendar(Locale.ITALY));
         this.setTelefono(telefono); 
         this.setDireccion(direccion);
-    }
+    }   
 
+    public Cliente(int id, String cedula, String nombre, String apellido, String correo, GregorianCalendar fechaNacimiento, String telefono, String direccion) {
+        this.id = id;
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.fechaNacimiento = fechaNacimiento;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
+    
     
     
     
@@ -152,6 +166,15 @@ public class Cliente implements Serializable {
         this.pedidos = pedidos;
     }
 
+    public Set<Tarjeta> getTarjeta() {
+        return tarjeta;
+    }
+
+    public void setTarjeta(Set<Tarjeta> tarjeta) {
+        this.tarjeta = tarjeta;
+    }
+    
+
     public boolean isEditable() {
         return editable;
     }
@@ -162,8 +185,9 @@ public class Cliente implements Serializable {
 
     @Override
     public String toString() {
-        
-        return "Cliente{" + "id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contrasenia=" + contrasenia + ", fechaNacimiento=" + fechaNacimiento + ", telefono=" + telefono + ", direccion=" + direccion + ", pedidos=" + pedidos + '}';
+        return "Cliente{" + "id=" + id + ", cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", contrasenia=" + contrasenia + ", fechaNacimiento=" + fechaNacimiento + ", telefono=" + telefono + ", direccion=" + direccion + ", pedidos=" + pedidos + ", tarjeta=" + tarjeta + '}';
     }
+
+    
 
 }
