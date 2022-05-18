@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -33,5 +34,85 @@ public class EntidadPrincipal implements Serializable {
     private String direccion;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "entidadPrincipal")
     private Set<Sucursal> sucursal = new HashSet<Sucursal>();
+    @Transient
+    private boolean editable;
+
+    public EntidadPrincipal() {
+        super();
+    }
     
+    
+    
+   
+     public EntidadPrincipal(int id, String nombre, String ruc, String telefono, String direccion) {
+        super();
+        this.setId(id); 
+        this.setNombre(nombre);
+        this.setRuc(ruc); 
+        this.setTelefono(telefono); 
+        this.setDireccion(direccion);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getRuc() {
+        return ruc;
+    }
+
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public Set<Sucursal> getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(Set<Sucursal> sucursal) {
+        this.sucursal = sucursal;
+    }
+
+    public boolean isEditable() {
+        return editable;
+    }
+
+    public void setEditable(boolean editable) {
+        this.editable = editable;
+    }
+
+    @Override
+    public String toString() {
+        return "EntidadPrincipal{" + "id=" + id + ", nombre=" + nombre + ", ruc=" + ruc + ", telefono=" + telefono + ", direccion=" + direccion + ", sucursal=" + sucursal + '}';
+    }
+    
+     
 }
