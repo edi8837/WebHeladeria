@@ -24,7 +24,7 @@ import java.util.Set;
 @Entity
 @NamedQuery(name = "getFacturaDetalle", query = "SELECT fd FROM  FacturaDetalle fd")
 
-class FacturaDetalle implements Serializable {
+public class FacturaDetalle implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id

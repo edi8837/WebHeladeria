@@ -68,16 +68,7 @@ public class Cliente implements Serializable {
         this.setDireccion(direccion);
     }   
 
-    public Cliente(int id, String cedula, String nombre, String apellido, String correo,  String telefono, String direccion) {
-        this.id = id;
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-      
-        this.telefono = telefono;
-        this.direccion = direccion;
-    }
+    
     
     
     

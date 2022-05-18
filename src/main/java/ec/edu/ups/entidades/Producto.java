@@ -19,7 +19,7 @@ import java.io.Serializable;
  */
 @Entity
 @NamedQuery(name = "getProducto", query = "SELECT p FROM  Producto p")
-class Producto implements Serializable {
+public class Producto implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id

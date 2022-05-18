@@ -20,7 +20,7 @@ import java.time.LocalDate;
  */
 @NamedQuery(name = "getTarjeta", query = "SELECT t FROM  Tarjeta t")
 @Entity
-class Tarjeta implements Serializable {
+public class Tarjeta implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id

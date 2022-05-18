@@ -21,7 +21,7 @@ import java.util.Set;
  */
 @Entity
 
-class EntidadPrincipal implements Serializable {
+public class EntidadPrincipal implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id

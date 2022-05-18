@@ -23,7 +23,7 @@ import java.util.Set;
  */
 @Entity
 @NamedQuery(name = "getSucursal", query = "SELECT s FROM  Sucursal s")
-class Sucursal implements Serializable {
+public class Sucursal implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
