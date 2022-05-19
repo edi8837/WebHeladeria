@@ -19,7 +19,7 @@ import java.util.Set;
 
 /**
  *
- * @author Jonny
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 @NamedQuery(name = "getFacturaDetalle", query = "SELECT fd FROM  FacturaDetalle fd")

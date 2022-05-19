@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  *
- * @author Jonny
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Stateless
 public class EntidadpFacade extends AbstractFacade<EntidadPrincipal> {

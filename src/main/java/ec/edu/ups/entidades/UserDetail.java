@@ -12,7 +12,7 @@ import jakarta.persistence.OneToOne;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 public class UserDetail {

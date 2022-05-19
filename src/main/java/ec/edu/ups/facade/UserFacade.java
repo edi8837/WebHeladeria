@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Stateless
 public class UserFacade extends AbstractFacade<User>{

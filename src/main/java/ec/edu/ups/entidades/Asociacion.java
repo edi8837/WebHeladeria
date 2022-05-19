@@ -15,7 +15,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 public class Asociacion implements Serializable{

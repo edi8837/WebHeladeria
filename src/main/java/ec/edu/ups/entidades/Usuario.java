@@ -22,7 +22,7 @@ import java.util.Set;
 
 /**
  *
- * @author Jonny
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 @NamedQuery(name = "getUsuario", query = "SELECT u FROM  Usuario u")

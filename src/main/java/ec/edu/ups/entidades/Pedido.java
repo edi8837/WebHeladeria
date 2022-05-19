@@ -15,7 +15,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Jonny
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 @NamedQuery(name = "getPedido", query = "SELECT pe FROM  Pedido pe")

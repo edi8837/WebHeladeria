@@ -14,7 +14,7 @@ import jakarta.persistence.Transient;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @NamedQuery(name = "getByLevel", 
             query = "SELECT u FROM User u WHERE u.level >= :level")

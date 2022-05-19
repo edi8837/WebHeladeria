@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 public abstract class AbstractFacade<T> {
     

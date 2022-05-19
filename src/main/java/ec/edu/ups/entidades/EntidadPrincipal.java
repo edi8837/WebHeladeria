@@ -18,7 +18,7 @@ import java.util.Set;
 
 /**
  *
- * @author Jonny
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 

@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 public class Row implements Serializable {
 

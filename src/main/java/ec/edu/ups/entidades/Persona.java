@@ -13,7 +13,7 @@ import java.util.GregorianCalendar;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 public class Persona implements Serializable {

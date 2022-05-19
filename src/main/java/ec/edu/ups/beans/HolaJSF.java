@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @FacesConfig(version = FacesConfig.Version.JSF_2_3)
 @Named

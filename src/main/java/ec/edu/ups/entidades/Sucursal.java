@@ -20,7 +20,7 @@ import java.util.Set;
 
 /**
  *
- * @author Jonny
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 @NamedQuery(name = "getSucursal", query = "SELECT s FROM  Sucursal s")

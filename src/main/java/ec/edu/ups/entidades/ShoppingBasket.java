@@ -17,7 +17,7 @@ import java.util.Set;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 public class ShoppingBasket implements Serializable{

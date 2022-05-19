@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Entity
 public class Product implements Serializable{

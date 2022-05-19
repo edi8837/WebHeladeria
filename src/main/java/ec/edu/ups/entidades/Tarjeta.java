@@ -16,7 +16,7 @@ import java.time.LocalDate;
 
 /**
  *
- * @author Jonny
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @NamedQuery(name = "getTarjeta", query = "SELECT t FROM  Tarjeta t")
 @Entity

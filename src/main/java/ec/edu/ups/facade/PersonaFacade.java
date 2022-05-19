@@ -11,7 +11,7 @@ import jakarta.persistence.PersistenceContext;
 
 /**
  *
- * @author Gabus
+ * @author Jonny,Daniel,Elvis,Edisson
  */
 @Stateless
 public class PersonaFacade extends AbstractFacade<Persona>{
