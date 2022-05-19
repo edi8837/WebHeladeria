@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Producto</title>
+        <style>
+            .tabla {
+                border-collapse: collapse;
+            }
+
+            .cabeceraTabla {
+                text-align: center;
+                background: none repeat scroll 0 0 #E5E5E5;
+                border-bottom: 1px solid #BBBBBB;
+                padding: 8px;
+            }
+
+            .filaPar {
+                text-align: center;
+                background: none repeat scroll 0 0 #FFFFFFF;
+                border-top: 1px solid #BBBBBB;
+            }
+
+            .filaImpar {
+                text-align: center;
+                background: none repeat scroll 0 0 #F9F9F9;
+                border-top: 1px solid #BBBBBB;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h3>Producto</h3>
+        <h:form>
+            <h:dataTable value="#{productoBeans.list}" var="o" styleClass="tabla"
+                         headerClass="cabeceraTabla" rowClasses="filaPar,filaImpar">
+
+                <h:column>
+                    <f:facet name="header">Id</f:facet>
+                        #{o.id}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">nombre</f:facet>
+                    <h:inputText value="#{o.nombre}" size="10"
+                                 rendered="#{o.editable}" /> 
+                    <h:outputText value="#{o.nombre}" rendered="#{not o.editable}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">descripcion</f:facet>
+                    <h:inputText value="#{o.descripcion}" size="10"
+                                 rendered="#{o.editable}" />
+                    <h:outputText value="#{o.descripcion}" rendered="#{not o.editable}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">marca</f:facet>
+                    <h:inputText value="#{o.marca}" size="10"
+                                 rendered="#{o.editable}" />
+                    <h:outputText value="#{o.marca}" rendered="#{not o.editable}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">stock</f:facet>
+                    <h:inputText value="#{o.stock}" size="10"
+                                 rendered="#{o.editable}" />
+                    <h:outputText value="#{o.stock}" rendered="#{not o.editable}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">estado</f:facet>
+                    <h:inputText value="#{o.estado}" size="10"
+                                 rendered="#{o.editable}" />
+                    <h:outputText value="#{o.estado}" rendered="#{not o.editable}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">precio</f:facet>
+                    <h:inputText value="#{o.precio}" size="10"
+                                 rendered="#{o.editable}" />
+                    <h:outputText value="#{o.precio}" rendered="#{not o.editable}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header"></f:facet>
+                    <h:commandLink value="Delete" action="#{productoBeans.delete(o)}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Action</f:facet>
+                    <h:commandLink value="Edit" action="#{productoBeans.edit(o)}"
+                                   rendered="#{not o.editable}" />
+                    <h:commandLink value="Save" action="#{productoBeans.save(o)}"
+                                   rendered="#{o.editable}" />
+                </h:column>
+            </h:dataTable>
+            <ul> 
+
+                <li>nombre<h:inputText size="10" value="#{productoBeans.nombre}" /></li>
+                <li>descripcion<h:inputText size="10" value="#{productoBeans.descripcion}" /></li>
+                <li>marca<h:inputText size="10" value="#{productoBeans.marca}" /></li>
+                <li>stock<h:inputText size="10" value="#{productoBeans.stock}" /></li>
+                <li>estado<h:inputText size="10" value="#{productoBeans.estado}" /></li>
+                <li>precio<h:inputText size="10" value="#{productoBeans.precio}" /></li><!-- comment -->
+
+            </ul>
+            <h:commandButton value="Add" action="#{productoBeans.add}" />
+        </h:form>
+    </h:body>
+</html>
